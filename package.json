@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "readme": "README.md",
+  "author": "Muktadir Hassan",
+  "repository": "https://github.com/MuktadirHassan/tailwind-dashboard.git",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
