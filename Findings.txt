@@ -1,0 +1,43 @@
+Task List:Sudo code - added at sudo.html in my branch. 
+Online dashboard research
+- Css variable
+- FlexBox
+
+Some other responsive good dashboards
+- Tailwindcss docs
+- CoreUI dashbaord
+- Mantine Dashboard
+- Twitch.tv site
+- docasauraus dashboard
+
+learning resources
+https://uxplanet.org/10-rules-for-better-dashboard-design-ef68189d734c
+https://www.toptal.com/designers/data-visualization/dashboard-design-best-practices
+
+
+Css variable resources:
+https://daily.dev/blog/css-variables-but-with-a-dash-of-javascript#quick-note-on-css-variables-
+https://www.toptal.com/front-end/dynamic-css-with-custom-properties
+
+FlexBox resources:
+https://medium.com/@kevjose/building-dashboards-using-grid-and-flex-box-620adc1fff51
+https://codepen.io/dfederighi/pen/wXBEaZ
+
+Findings: 
+FlexBox seems like to be better than css variable.cause: - css variable is complex to modify once it build. - I mean reusability is less. - But for fixed component it may be better.
+FlexBox also have some issue I think,- FlexBox is less customable we can just use the skeleton of flex.- and the good portion is easy to partitioning But I do prefer tailwind css as we discuss earlier morning.So, you may have a look at the sudo code and after your confirmation I will proceed with tailwind css.
+
+
+tailwind resources:
+docs.google.com/spreadsheets/d/1p5vPH9I9Hb4nJs74Rn89gX1PBflR1LFA/edit#gid=123801323
+
+CoreUI resources:
+https://coreui.io/docs/2.1/getting-started/introduction/
+
+Mantine resources:
+https://www.dash-mantine-components.com/components/grid
+
+Docasauraus resources:
+https://docusaurus.canny.io/
+
+
