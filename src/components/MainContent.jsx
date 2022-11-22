@@ -27,26 +27,25 @@ const MainContent = () => {
 
       {/* info part */}
       <div>
-        <div className="grid grid-cols-2 grid-flow-rows gap-4 my-4">
+        <div className="grid grid-cols-1 grid-flow-rows gap-4 my-4">
           <div class="box-border h-96  w-100 p-4 border-4">01</div>
+        </div>
+
+        <div className="grid grid-cols-2 grid-flow-rows gap-4 my-4">
           <div class="box-border h-96  w-100 p-4 border-4">02</div>
+          <div class="box-border h-96  w-100 p-4 border-4">03</div>
         </div>
 
         <div class="grid grid-cols-3 gap-4">
-          <div class="col-span-2 box-border h-96  w-100 p-4 border-4">03</div>
           <div class="box-border h-96  w-100 p-4 border-4">04</div>
-
           <div class="box-border h-96  w-100 p-4 border-4">05</div>
           <div class="box-border h-96  w-100 p-4 border-4">06</div>
-          <div class="box-border h-96  w-100 p-4 border-4">07</div>
 
+          <div class="col-span-2 box-border h-96  w-100 p-4 border-4">07</div>
           <div class="box-border h-96  w-100 p-4 border-4">08</div>
-          <div class="col-span-2 box-border h-96  w-100 p-4 border-4">09</div>
-        </div>
 
-        <div className="grid grid-cols-2 grid-flow-rows gap-4 my-4">
-          <div class="box-border h-96  w-100 p-4 border-4">10</div>
-          <div class="box-border h-96  w-100 p-4 border-4">11</div>
+          <div class="box-border h-96  w-100 p-4 border-4">09</div>
+          <div class="col-span-2 box-border h-96  w-100 p-4 border-4">10</div>
         </div>
       </div>
       {/* info part */}
