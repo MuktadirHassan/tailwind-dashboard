@@ -1,3 +1,4 @@
+import MainContent from "./components/MainContent";
 import SideBar from "./components/SideBar";
 
 export default function App() {
@@ -60,7 +61,9 @@ export default function App() {
         <SideBar />
       </div>
 
-      <div className="bg-slate-600 col-span-10">Main Content</div>
+      <div className="bg-slate-600 col-span-10">
+        <MainContent />
+      </div>
     </div>
   );
 }
