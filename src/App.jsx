@@ -57,11 +57,11 @@ export default function App() {
           <h1>Bottom</h1>
         </div>
       </div> */}
-      <div className="bg-slate-900 col-span-2">
+      <div className="bg-slate-900 col-span-2 overflow-auto">
         <SideBar />
       </div>
 
-      <div className="bg-slate-600 col-span-10">
+      <div className="bg-slate-600 col-span-10 h-screen overflow-y-scroll">
         <MainContent />
       </div>
     </div>
