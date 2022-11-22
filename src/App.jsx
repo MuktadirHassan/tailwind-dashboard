@@ -57,7 +57,7 @@ export default function App() {
           <h1>Bottom</h1>
         </div>
       </div> */}
-      <div className="bg-slate-900 col-span-2 overflow-auto">
+      <div className="bg-slate-900 col-span-2 overflow-auto ">
         <SideBar />
       </div>
 
