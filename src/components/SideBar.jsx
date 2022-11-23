@@ -22,6 +22,15 @@ const SideBar = (states) => {
   //     setOpen(!open);
   //   }
   // }, [window.innerWidth]);
+  window.onresize = function (event) {
+    console.log(event);
+    if (window.innerWidth > 425) {
+      setOpen(true);
+    } else {
+      // show menubar
+      setOpen(false);
+    }
+  };
 
   return (
     <div className="h-screen">
