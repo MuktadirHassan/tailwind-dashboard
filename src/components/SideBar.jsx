@@ -14,6 +14,22 @@ const SideBar = (states) => {
     { title: "Title 4", src: "Chart" },
     { title: "Title 6 ", src: "Folder", gap: true },
     { title: "Title 7", src: "Setting" },
+    { title: "Home", src: "Chart_fill" },
+    { title: "Title", src: "Chat" },
+    { title: "Title 1", src: "User", gap: true },
+    { title: "Title 2 ", src: "Calendar" },
+    { title: "Title 3", src: "Search" },
+    { title: "Title 4", src: "Chart" },
+    { title: "Title 6 ", src: "Folder", gap: true },
+    { title: "Title 7", src: "Setting" },
+    { title: "Home", src: "Chart_fill" },
+    { title: "Title", src: "Chat" },
+    { title: "Title 1", src: "User", gap: true },
+    { title: "Title 2 ", src: "Calendar" },
+    { title: "Title 3", src: "Search" },
+    { title: "Title 4", src: "Chart" },
+    { title: "Title 6 ", src: "Folder", gap: true },
+    { title: "Title 7", src: "Setting" },
   ];
 
   // useEffect(() => {
@@ -59,32 +75,37 @@ const SideBar = (states) => {
           /> */}
         </div>
 
-        <ul className="pt-6">
-          {Menus.map((Menu, index) => (
-            <li
-              key={index}
-              className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+        <div className="overflow-y-scroll h-[53rem]">
+          <ul className="pt-4">
+            {Menus.map((Menu, index) => (
+              <li
+                key={index}
+                className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
               ${Menu.gap ? "mt-9" : "mt-2"} ${
-                index === 0 && "bg-light-white"
-              } `}
-            >
-              <img
-                // className={`${!open && "hidden"}`}
-                src={`./src/assets/${Menu.src}.png`}
-              />
-              <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div
-        className={`h-12 text-white origin-left font-medium text-xl  bg-sky-900 sticky bottom-0 ${
-          !open && "hidden"
-        }`}
-      >
-        <h1>Bottom</h1>
+                  index === 0 && "bg-light-white"
+                } `}
+              >
+                <img
+                  // className={`${!open && "hidden"}`}
+                  src={`./src/assets/${Menu.src}.png`}
+                />
+                <span
+                  className={`${!open && "hidden"} origin-left duration-200`}
+                >
+                  {Menu.title}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div
+          className={`h-12 text-white origin-left font-medium text-xl  bg-sky-900 sticky bottom-0 ${
+            !open && "hidden"
+          }`}
+        >
+          <h1>Bottom</h1>
+        </div>
       </div>
     </div>
   );

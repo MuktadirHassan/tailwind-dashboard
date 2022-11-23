@@ -30,14 +30,41 @@ FlexBox also have some issue I think,- FlexBox is less customable we can just us
 
 tailwind resources:
 docs.google.com/spreadsheets/d/1p5vPH9I9Hb4nJs74Rn89gX1PBflR1LFA/edit#gid=123801323
+https://demos.creative-tim.com/argon-dashboard-pro-tailwind/pages/dashboards/default.html
+
+construct with flex > flex wrap
+pros:
+a lots of customable classes that will help you to control easily.
+cons:
+it difficult to remember all the class at a time.
+
+
 
 CoreUI resources:
 https://coreui.io/docs/2.1/getting-started/introduction/
+https://coreui.io/demos/bootstrap/4.3/default-v3/
+
+root structure flex > flex colum.
+sidebar uses as hide and show condition.
+pros:
+For any fixed kind of dashboard it will be fine
+cons:
+for any customable dashboard it will be not better because it depends on css variables and changes any of css variable for every single item is little be complex and time consuming.
+
+
+
 
 Mantine resources:
 https://www.dash-mantine-components.com/components/grid
 
+controlled by container mantine-container-root> mantine-navbar-root
+pros:
+default component is ready to use.
+cons
+class availability is less accessible.
+
 Docasauraus resources:
 https://docusaurus.canny.io/
+controlled by container 
 
 

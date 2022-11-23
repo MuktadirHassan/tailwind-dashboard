@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <div className="h-screen flex">
-      <div className={`h-screen overflow-y-scroll`}>
+      <div className={`h-screen overflow-y-hidden`}>
         <SideBar states={{ open, setOpen }} />
       </div>
       <div className="h-screen flex-1 overflow-y-scroll">
