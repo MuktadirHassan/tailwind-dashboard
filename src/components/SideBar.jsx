@@ -1,47 +1,40 @@
-import React, { useState } from "react";
+import React from "react";
 
-const SideBar = () => {
-  const [open, setOpen] = useState(true);
+const SideBar = (states) => {
+  console.log("open side bar>>", states);
+  const open = states.states.open;
+  let setOpen = states.states.setOpen;
+  // const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Dashboard", src: "Chart_fill" },
-    { title: "Inbox", src: "Chat" },
-    { title: "Accounts", src: "User", gap: true },
-    { title: "Schedule ", src: "Calendar" },
-    { title: "Search", src: "Search" },
-    { title: "Analytics", src: "Chart" },
-    { title: "Files ", src: "Folder", gap: true },
-    { title: "Setting", src: "Setting" },
+    { title: "Home", src: "Chart_fill" },
+    { title: "Title", src: "Chat" },
+    { title: "Title 1", src: "User", gap: true },
+    { title: "Title 2 ", src: "Calendar" },
+    { title: "Title 3", src: "Search" },
+    { title: "Title 4", src: "Chart" },
+    { title: "Title 6 ", src: "Folder", gap: true },
+    { title: "Title 7", src: "Setting" },
   ];
-  // return (
-  // <div className={open ? "w-72" : "w-20"}>
-  //   <div className="h-12 p-4 bg-sky-900 sticky top-0">
-  //     <div className="relative">
-  //       <h1>Top</h1>
-  //       <div className="absolute cursor-pointer rounded-full w-7 border-2 h-7 z-10 right-0 top-8">
-  //         <img src="../assets/images/control.png" alt="" className="" />
-  //       </div>
-  //     </div>
-  //   </div>
-  //   <div className="h-12 p-4 bg-sky-900 sticky bottom-0">
-  //     <h1>Bottom</h1>
-  //   </div>
-  // </div>;
-  // );
+
+  // useEffect(() => {
+  //   console.log("window.innerWidth>>", window.innerWidth);
+  //   if (window.innerWidth <= 425) {
+  //     setOpen(!open);
+  //   }
+  // }, [window.innerWidth]);
 
   return (
     <div className="h-screen">
       <div
         className={` ${
-          open ? "w-72" : "w-20"
-        } bg-dark-purple h-screen relative duration-300`}
+          open ? "w-72" : "w-0"
+        } bg-dark-purple h-screen duration-300 sticky`}
       >
-        <img
-          src="./src/assets/control.png"
-          className={`absolute z-40 cursor-pointer -right-3 top-6 w-7 border-dark-purple
-           border-2 rounded-full  ${!open && "rotate-180"}`}
-          onClick={() => setOpen(!open)}
-        />
-        <div className="flex gap-x-4 items-center h-12 p-4 bg-sky-900 sticky top-0">
+        <div
+          className={`${
+            !open && "hidden"
+          }, flex gap-x-4 h-12 p-4 justify-between sticky bg-sky-900 top-0 `}
+        >
           <h1
             className={`text-white origin-left font-medium text-xl duration-200 ${
               !open && "scale-0"
@@ -49,6 +42,12 @@ const SideBar = () => {
           >
             Side Bar
           </h1>
+          {/* <img
+            src="./src/assets/control.png"
+            className={`absolute z-40 cursor-pointer right-0 top-3 w-7 border-dark-purple
+           border-2 rounded-full  ${!open && "rotate-180"}`}
+            onClick={() => setOpen(!open)}
+          /> */}
         </div>
 
         <ul className="pt-6">
@@ -73,7 +72,7 @@ const SideBar = () => {
       </div>
       <div
         className={`h-12 text-white origin-left font-medium text-xl  bg-sky-900 sticky bottom-0 ${
-          !open && "scale-0"
+          !open && "hidden"
         }`}
       >
         <h1>Bottom</h1>

@@ -1,11 +1,26 @@
 import React from "react";
 
-const MainContent = () => {
+const MainContent = (states) => {
+  console.log("open main>>", states);
+  const open = states.states.open;
+  const setOpen = states.states.setOpen;
+  // const [open, setOpen] = useState(true);
   return (
     <div className="">
       <div className="h-12 p-4 bg-sky-600 sticky top-0">
-        <h2>Main Content</h2>
+        <div>
+          <img
+            src="./src/assets/control.png"
+            className={`absolute z-40 cursor-pointer left-0 top-3 w-7 border-dark-purple
+           border-2 rounded-full  ${!open && "rotate-180"}`}
+            onClick={() => setOpen(!open)}
+          />
+        </div>
+        <div className="ml-4">
+          <h2>Main Content</h2>
+        </div>
       </div>
+
       {/* card part */}
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-flow-rows gap-2 my-2">

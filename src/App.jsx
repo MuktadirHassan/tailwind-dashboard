@@ -1,14 +1,17 @@
+import { useState } from "react";
 import MainContent from "./components/MainContent";
 import SideBar from "./components/SideBar";
 
 export default function App() {
+  const [open, setOpen] = useState(true);
+
   return (
     <div className="h-screen flex">
-      <div className="h-screen overflow-y-scroll overflow-x-hidden">
-        <SideBar />
+      <div className={`h-screen overflow-y-scroll`}>
+        <SideBar states={{ open, setOpen }} />
       </div>
       <div className="h-screen flex-1 overflow-y-scroll">
-        <MainContent />
+        <MainContent states={{ open, setOpen }} />
       </div>
     </div>
   );
