@@ -23,7 +23,7 @@ const SideBar = (states) => {
   //   }
   // }, [window.innerWidth]);
   window.onresize = function (event) {
-    console.log(event);
+    // console.log(event);
     if (window.innerWidth > 425) {
       setOpen(true);
     } else {
