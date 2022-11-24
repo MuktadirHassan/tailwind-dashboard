@@ -33,6 +33,17 @@ docs.google.com/spreadsheets/d/1p5vPH9I9Hb4nJs74Rn89gX1PBflR1LFA/edit#gid=123801
 https://demos.creative-tim.com/argon-dashboard-pro-tailwind/pages/dashboards/default.html
 
 construct with flex > flex wrap
+
+body
+    -aside(sidebar)
+        -block
+            -ul
+                -li
+    -main
+        -nav
+        -div
+            -flex, flex-wrap(cards)
+
 pros:
 a lots of customable classes that will help you to control easily.
 cons:
@@ -45,6 +56,18 @@ https://coreui.io/docs/2.1/getting-started/introduction/
 https://coreui.io/demos/bootstrap/4.3/default-v3/
 
 root structure flex > flex colum.
+
+root:
+    -aside(sidebar)
+        -ul
+            -li(flex col)
+    -main
+        -nav
+            -flex wrap
+        -main
+            -card(using flex)
+
+
 sidebar uses as hide and show condition.
 pros:
 For any fixed kind of dashboard it will be fine
@@ -58,13 +81,64 @@ Mantine resources:
 https://www.dash-mantine-components.com/components/grid
 
 controlled by container mantine-container-root> mantine-navbar-root
+
+-body
+    -mantine-header-root 
+    -mantine-navbar-root
+    -wrapper
+        -mantine-container-root
+            -_pages_content(using id based css)
+
 pros:
 default component is ready to use.
 cons
 class availability is less accessible.
 
+
 Docasauraus resources:
 https://docusaurus.canny.io/
 controlled by container 
 
+body
+    -nav
+        -nav
+        -ul
+            -menu
+    -div
+        -aside
+            -sidebar-container
+                -sidebar-menu
+                    -ul
+                        -li
+            -button
+        -main
+            -container
+                -row
+                    -col
+pros:
+fitted for doc type content doc type card using is very easy rather then graphical chart.
+cons:
+limited class & mobile responsive is not fitted for 
 
+Twitch.tv site
+https://dashboard.twitch.tv/broadcast
+
+controlled by Layout
+body
+    -nav
+    -div
+        -menu-Layout
+            -ul
+                -li
+    -div
+        -div
+            Layout
+                -main
+                    -simplebar-content
+                        -Layout
+                            -card
+
+pros:
+good for streaming type sites like fixed content but loading it very fast
+cons:
+component hierarchy is static and hierarchy order is sometimes more then its use
