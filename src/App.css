@@ -4,21 +4,6 @@
   padding: 2rem;
   text-align: center;
 }
-.PopoverTrigger {
-  background-color: white;
-  border-radius: 4px;
-}
-
-.PopoverContent {
-  border-radius: 4px;
-  padding: 20px;
-  width: 260px;
-  background-color: white;
-}
-
-.PopoverArrow {
-  fill: white;
-}
 
 .logo {
   height: 6em;

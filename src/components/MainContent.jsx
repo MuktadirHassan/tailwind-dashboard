@@ -1,7 +1,7 @@
 import React from "react";
 
 const MainContent = (states) => {
-  console.log("open main>>", states);
+  // console.log("open main>>", states);
   const open = states.states.open;
   const setOpen = states.states.setOpen;
   // const [open, setOpen] = useState(true);
