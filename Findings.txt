@@ -1,0 +1,144 @@
+Task List:Sudo code - added at sudo.html in my branch. 
+Online dashboard research
+- Css variable
+- FlexBox
+
+Some other responsive good dashboards
+- Tailwindcss docs
+- CoreUI dashbaord
+- Mantine Dashboard
+- Twitch.tv site
+- docasauraus dashboard
+
+learning resources
+https://uxplanet.org/10-rules-for-better-dashboard-design-ef68189d734c
+https://www.toptal.com/designers/data-visualization/dashboard-design-best-practices
+
+
+Css variable resources:
+https://daily.dev/blog/css-variables-but-with-a-dash-of-javascript#quick-note-on-css-variables-
+https://www.toptal.com/front-end/dynamic-css-with-custom-properties
+
+FlexBox resources:
+https://medium.com/@kevjose/building-dashboards-using-grid-and-flex-box-620adc1fff51
+https://codepen.io/dfederighi/pen/wXBEaZ
+
+Findings: 
+FlexBox seems like to be better than css variable.cause: - css variable is complex to modify once it build. - I mean reusability is less. - But for fixed component it may be better.
+FlexBox also have some issue I think,- FlexBox is less customable we can just use the skeleton of flex.- and the good portion is easy to partitioning But I do prefer tailwind css as we discuss earlier morning.So, you may have a look at the sudo code and after your confirmation I will proceed with tailwind css.
+
+
+tailwind resources:
+docs.google.com/spreadsheets/d/1p5vPH9I9Hb4nJs74Rn89gX1PBflR1LFA/edit#gid=123801323
+https://demos.creative-tim.com/argon-dashboard-pro-tailwind/pages/dashboards/default.html
+
+construct with flex > flex wrap
+
+body
+    -aside(sidebar)
+        -block
+            -ul
+                -li
+    -main
+        -nav
+        -div
+            -flex, flex-wrap(cards)
+
+pros:
+a lots of customable classes that will help you to control easily.
+cons:
+it difficult to remember all the class at a time.
+
+
+
+CoreUI resources:
+https://coreui.io/docs/2.1/getting-started/introduction/
+https://coreui.io/demos/bootstrap/4.3/default-v3/
+
+root structure flex > flex colum.
+
+root:
+    -aside(sidebar)
+        -ul
+            -li(flex col)
+    -main
+        -nav
+            -flex wrap
+        -main
+            -card(using flex)
+
+
+sidebar uses as hide and show condition.
+pros:
+For any fixed kind of dashboard it will be fine
+cons:
+for any customable dashboard it will be not better because it depends on css variables and changes any of css variable for every single item is little be complex and time consuming.
+
+
+
+
+Mantine resources:
+https://www.dash-mantine-components.com/components/grid
+
+controlled by container mantine-container-root> mantine-navbar-root
+
+-body
+    -mantine-header-root 
+    -mantine-navbar-root
+    -wrapper
+        -mantine-container-root
+            -_pages_content(using id based css)
+
+pros:
+default component is ready to use.
+cons
+class availability is less accessible.
+
+
+Docasauraus resources:
+https://docusaurus.canny.io/
+controlled by container 
+
+body
+    -nav
+        -nav
+        -ul
+            -menu
+    -div
+        -aside
+            -sidebar-container
+                -sidebar-menu
+                    -ul
+                        -li
+            -button
+        -main
+            -container
+                -row
+                    -col
+pros:
+fitted for doc type content doc type card using is very easy rather then graphical chart.
+cons:
+limited class & mobile responsive is not fitted for 
+
+Twitch.tv site
+https://dashboard.twitch.tv/broadcast
+
+controlled by Layout
+body
+    -nav
+    -div
+        -menu-Layout
+            -ul
+                -li
+    -div
+        -div
+            Layout
+                -main
+                    -simplebar-content
+                        -Layout
+                            -card
+
+pros:
+good for streaming type sites like fixed content but loading it very fast
+cons:
+component hierarchy is static and hierarchy order is sometimes more then its use
